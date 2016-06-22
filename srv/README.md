@@ -1,6 +1,6 @@
-# Srv Srv
+# SMTP srv
 
-This is the Srv service with fqdn go.micro.srv.smtp.srv.srv.
+This is the SMTP service with fqdn go.micro.srv.smtp for email delivery.
 
 ## Getting Started
 
@@ -20,11 +20,9 @@ $ consul agent -dev -advertise=127.0.0.1
 $ go run main.go
 ```
 
-### Building a container
+### Usage
 
-If you would like to build the docker container do the following
+#### Send
 ```
-CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -ldflags '-w' -o srv-srv ./main.go
-docker build -t srv-srv .
-
+micro query go.micro.srv.smtp SMTP.Send '{"recipient":"user@domain.com", "subject": "Mail subject", "body": "<table style=\"width:100%;\"><tr><td>lets</td><td>see</td></tr><tr><td>the</td><td>markup</td></tr></table>"}'
 ```

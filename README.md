@@ -22,7 +22,7 @@ $ consul agent -dev -advertise=127.0.0.1
 ### Run Service manually
 
 ```
-$ go run srv/main.go
+go run srv/main.go --email_host=SERVER_ADDRESS --email_host_port=SMPT_SERVER_PORT --email_host_user=USERNAME --email_host_password=PASSWORD --default_from_email=noreply@company.com
 ```
 
 ### Run API manually
@@ -33,6 +33,9 @@ $ go run api/main.go
 
 
 ### Run docker containers
+
+Flags have to be passed around, you will want to edit YML file with your SMTP server details.
+
 Compile Go binaries and build docker image. 
 ```
 make 
