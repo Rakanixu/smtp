@@ -1,4 +1,4 @@
-# SMTP srv
+# SMTP srv [![GoDoc](https://godoc.org/github.com/Rakanixu/smtp/srv?status.svg)](https://godoc.org/github.com/Rakanixu/smtp/srv)
 
 This is the SMTP service with fqdn go.micro.srv.smtp for email delivery.
 

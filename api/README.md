@@ -1,4 +1,4 @@
-# SMTP API
+# SMTP API [![GoDoc](https://godoc.org/github.com/Rakanixu/smtp/api?status.svg)](https://godoc.org/github.com/Rakanixu/smtp/api)
 
 This is the SMTP API with fqdn go.micro.api.smtp for email delivery.
 

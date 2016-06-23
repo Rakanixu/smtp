@@ -1,4 +1,4 @@
-# SMTP
+# SMTP [![License](https://img.shields.io/:license-apache-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![Go Report Card](https://goreportcard.com/badge/Rakanixu/smtp)](https://goreportcard.com/report/github.com/Rakanixu/smtp)
 
 SMTP microservice and API for email delivery.
 
