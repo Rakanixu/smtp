@@ -24,5 +24,5 @@ $ go run main.go
 
 #### Send
 ```
-micro query go.micro.srv.smtp SMTP.Send '{"recipient":["user@domain.com", "add@domain.es"], "subject": "Mail subject", "body": "<table style=\"width:100%;\"><tr><td>lets</td><td>see</td></tr><tr><td>the</td><td>markup</td></tr></table>"}'
+micro query go.micro.srv.smtp SMTP.Send '{"recipient":["user@domain.com", "user2@domain.com"], "subject": "Mail subject", "body": "<table style=\"width:100%;\"><tr><td>lets</td><td>see</td></tr><tr><td>the</td><td>markup</td></tr></table>"}'
 ```
