@@ -7,7 +7,7 @@ import (
 	"golang.org/x/net/context"
 )
 
-// Smtp struct
+// SMTP struct
 type SMTP struct{}
 
 // Send srv handler

@@ -35,14 +35,14 @@ func sendMail(recipient string, subject string, body string) error {
 
 	// Mail address sending the mail
 	fromAddress := mail.Address{
-		"",
-		DefaultFromEmail,
+		Name:    "",
+		Address: DefaultFromEmail,
 	}
 
 	// Mail address receiving the mail
 	toAddress := mail.Address{
-		"",
-		recipient,
+		Name:    "",
+		Address: recipient,
 	}
 
 	// Mail header
@@ -88,6 +88,10 @@ func getPlainAuth() smtp.Auth {
 
 // Use mail's RFC2047 to encode strings
 func encodeRFC2047(s string) string {
-	addr := mail.Address{s, ""}
+	addr := mail.Address{
+		Name:    s,
+		Address: "",
+	}
+
 	return strings.Trim(addr.String(), " <>")
 }
