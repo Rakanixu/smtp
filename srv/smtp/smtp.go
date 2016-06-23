@@ -17,8 +17,19 @@ var (
 	DefaultFromEmail  string
 )
 
-// Send a mail
-func Send(recipient string, subject string, body string) error {
+// Send mail to all recipients
+func Send(recipient []string, subject string, body string) error {
+	for _, add := range recipient {
+		if err := sendMail(add, subject, body); err != nil {
+			return err
+		}
+	}
+
+	return nil
+}
+
+// Opens connection to SMPT server and send single mail
+func sendMail(recipient string, subject string, body string) error {
 	// Set up authentication information.
 	auth := getPlainAuth()
 
