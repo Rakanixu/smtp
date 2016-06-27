@@ -25,4 +25,13 @@ $ go run main.go
 #### Send
 ```
 micro query go.micro.srv.smtp SMTP.Send '{"recipient":["user@domain.com", "user2@domain.com"], "subject": "Mail subject", "body": "<table style=\"width:100%;\"><tr><td>lets</td><td>see</td></tr><tr><td>the</td><td>markup</td></tr></table>"}'
+
+{}
+```
+
+#### SetSettings
+```
+micro query go.micro.srv.smtp SMTP.SetSettings '{"email_host": "EmailHost", "email_host_user": "EmailHostUser", "email_host_password": "EmailHostPassword", "email_host_port": "EmailHostPort", "default_from_email": "DefaultFromEmail"}'
+
+{}
 ```

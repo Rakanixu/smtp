@@ -4,6 +4,7 @@ package go.micro.srv.smtp;
 
 service SMTP {
 	rpc Send(SendRequest) returns (SendResponse) {}
+	rpc SetSettings(SetSettingsRequest) returns (SetSettingsResponse) {}
 }
 
 message SendRequest {
@@ -13,5 +14,17 @@ message SendRequest {
 }
 
 message SendResponse {
+
+}
+
+message SetSettingsRequest {
+  string email_host = 1;
+  string email_host_port = 2;
+  string email_host_user = 3;
+  string email_host_password = 4;
+  string default_from_email = 5;
+}
+
+message SetSettingsResponse {
 
 }

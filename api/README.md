@@ -24,7 +24,7 @@ $ go run main.go
 
 #### Send
 ```
-http[domain:micro API port]/smtp/send
+[POST] http[domain:micro API port]/smtp/send
 {
     "recipient":[
         "user@domain.com", 
@@ -32,6 +32,35 @@ http[domain:micro API port]/smtp/send
     ], 
     "subject": "Mail subject", 
     "body": "<table style=\"width:100%;\"><tr><td>lets</td><td>see</td></tr><tr><td>the</td><td>markup</td></tr></table>"
+}
+
+{}
+```
+
+#### Settings
+Get resource /smtp/settings definition
+```
+[OPTIONS] http[domain:micro API port]/smtp/settings
+{}
+
+{
+  "email_host": "required",
+  "email_host_port": "required",
+  "email_host_user": "required",
+  "email_host_password": "required",
+  "default_from_email": "required"
+}
+```
+
+Create or update SMTP server configuration
+```
+[PUT] http[domain:micro API port]/smtp/settings
+{
+    "email_host": "EmailHost",
+    "email_host_user": "EmailHostUser",
+    "email_host_password": "EmailHostPassword",
+    "email_host_port": "EmailHostPort",
+    "default_from_email": "DefaultFromEmail"
 }
 
 {}
